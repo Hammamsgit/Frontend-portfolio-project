@@ -10,7 +10,7 @@ function NavBar({openSideBar}) {
  
     //choose the screen size 
     const handleResize = () => {
-    if (window.innerWidth < 720) {
+    if (window.innerWidth < 640) {
         setIsMobile(true)
     } else {
         setIsMobile(false)
@@ -45,6 +45,7 @@ function NavBar({openSideBar}) {
         </div> 
         </nav>)
     }
+    
     return (
         <nav className="navBar" >
             <Link className="homeLink" to="/">
