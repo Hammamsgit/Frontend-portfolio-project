@@ -10,6 +10,7 @@ function SingleArticle(props) {
   const [comments, setComments] = useState([]);
   const [vote, setVote] = useState(0);
   const [activeVote, setActiveVote] = useState(false);
+  const [error,setError]=useState(false)
 
   const [open, setOpen] = useState(false);
 
@@ -32,16 +33,33 @@ function SingleArticle(props) {
 
   const incVote = (num) => {
     if (!activeVote) {
-      api.patchVote(article_id, num);
+      api.patchVote(article_id, num).catch(()=>{
+        setVote((currVotes) => {
+            setError(true);
+            setActiveVote(false);
+            return currVotes - 1;
+          });
+      });
+
       setVote((currVotes) => {
         return currVotes + 1;
       });
+      setError(false);
       setActiveVote(true);
     } else {
-      api.patchVote(article_id, -num);
+      api.patchVote(article_id, -num).catch(()=>{
+        setVote((currVotes) => {
+            setError(true);
+            setActiveVote(false);
+            return currVotes + 1;
+            
+          });
+          
+      });;
       setVote((currVotes) => {
         return currVotes - 1;
       });
+      setError(false);
       setActiveVote(false);
     }
   };
@@ -63,7 +81,7 @@ function SingleArticle(props) {
         <p className="votes" onClick={() => {
               incVote(1);
             }}>
-          { !activeVote ? <img
+          {error ?  <img className="vte" src="https://img.icons8.com/material/50/000000/cancel-2--v1.png"/>:  !activeVote ? <img
             className="vte"
             src="https://img.icons8.com/ios-glyphs/30/000000/star-half-empty.png"
  

@@ -19,9 +19,19 @@ body {
   width: 16px;
   height: auto;
 }
+.vte:active {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
 .vte1 {
   width: 20px;
   height: auto;
+}
+.vte1:active {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
 }
 
 .card {
