@@ -31,10 +31,14 @@ export const getArticlesByTopic = (topic) => {
 };
 
 
-
 export const getCommentsByArticleId = (id) => {
   return reiboApi.get(`/articles/${id}/comments`).then(({ data: { comments } }) => {
     console.log(comments, " this is from api <<<<><<<>><<>><<>><< ")
     return comments;
   });
 };
+
+// export const patchVote = (id,vote) => {
+//   return reiboApi.patch(`/articles/${id}`,{"inc_votes": vote}).then(({data:{article}})
+//   console.log(article))
+// };
