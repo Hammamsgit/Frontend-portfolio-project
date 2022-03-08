@@ -1,7 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import * as api from "../utils/api";
 import ArticleCard from './ArticleCard';
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
 function ArticleList(props) {
     const [article, setArticles] = useState([]);
@@ -32,7 +32,9 @@ function ArticleList(props) {
           {article.map(({ article_id, title, author, body, created_at,votes,comment_count}) => {
             return (
               <li key={article_id}>
+                
                 <ArticleCard
+                article_id={article_id}
                   title={title}
                   author={author}
                   body={body}

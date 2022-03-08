@@ -4,6 +4,7 @@ import './App.css';
 import ArticleList from './components/ArticleList';
 import NavBar from './components/NavBar';
 import SideBar from "./components/SideBar";
+import SingleArticle from "./components/SingleArticle";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Routes>
       <Route path="/" element={<ArticleList />} />
       <Route path="/articles/:topic" element={<ArticleList />}/>
+      <Route path="/article/:article_id" element={<SingleArticle />}/>
       </Routes>
       </div>
     </div>
