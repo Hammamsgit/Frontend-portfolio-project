@@ -10,6 +10,12 @@ export const getArticles = () => {
   });
 };
 
+export const getTopics = () => {
+  return reiboApi.get("/topics").then(({ data: { topics } }) => {
+    return topics
+  });
+};
+
 export const getArticlesByTopic = (topic) => {
   return reiboApi.get(`/articles?topic=${topic}`).then(({ data: { articles } }) => {
    

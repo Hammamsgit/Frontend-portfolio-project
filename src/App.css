@@ -1,22 +1,35 @@
+
 body {
-  background: url(https://wallpapercave.com/wp/wp6988971.jpg)
+  background: url(https://wallpaperaccess.com/full/3204572.jpg)
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-color: black;
+  background-color: #1b1b1b;
+ 
 }
 
 .App {
   text-align: center;
 }
+.cmnt{
+ 
+  width: 16px;
+  height: auto;
+}
+.vte{
+ 
+  width: 16px;
+  height: auto;
+}
+
 
 .card{
   text-align: center;
   width: 75%;
   display: flex;
-  top:1;
+  /* top:1; */
   flex-direction: column;
   align-items: center;
   padding:3%;
@@ -39,6 +52,7 @@ body {
   margin:auto;
   align-items:flex-end;
   justify-content: space-around;
+  
 }
 .votes{
   margin:1%;
@@ -59,37 +73,189 @@ body {
   position: sticky;
   float:inherit;
   top: 0;
+  background-color: #1b1b1b;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding:3%;
+  margin: auto;
+  justify-content: space-between;
+  z-index:100;
+}
+.burger{
+  align-self: flex-end;
+  margin: 5px;
+}
+.sideBar{
+  padding-top: 20px;
+  position:fixed;
+  background-color: #1b1b1b;
+  top:50px;
+  right:0;
+  height: 100vh;
+  width: 100%;
+  z-index:100;
+  /* position: -webkit-sticky; /* Safari */
+  /* position: sticky; */ 
+  transform: translateX(-100%);
+  transition: all 0.4s;
+}
+.listHeading{
+  color: rgb(167, 167, 167);
+}
+.sideBar li{
+list-style: none;
+padding: 1rem 2rem;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+font-size: 20px;
+font-weight: bold;
+border-width: 0.2px;
+
+}
+
+.sideBar li:active{
+  background-color: rgb(63, 62, 62);
+}
+.sideBar--open{
+  transform: translateX(0%);
+}
+.topicLink{
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  padding:3%;
+}
+.topicLink:active {
+  color: darkgray;
+}
+.homeLink{
+  text-decoration: none;
+}
+.logo{
+  color: white;
+  font-size: 2rem;
+  padding-top: 2px;
+  padding-right: 30px;
+  margin: 2%;
+  text-decoration: none;
+}
+.logo:active {
+  color: darkgray;
+}
+
+
+
+
+@media (min-width:640px) {
+
+body {
+  background: url(https://wallpaperaccess.com/full/3204572.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: black;
-  height: 10%;
+}
+
+.App {
+  text-align: center;
+}
+
+.card{
+  text-align: center;
+  width: 75%;
+  display: flex;
+  top:1;
+  flex-direction: column;
+  align-items: center;
+  padding:3%;
+  margin: auto;
+  justify-content: space-between;
+  background-color: lightgrey;
+  border-radius: 10px;
+  filter: opacity(0.94);
+}
+.authorTag{
+  align-self: end;
+  margin-right: 20px;
+}
+
+
+.tools{
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  margin:auto;
+  align-items:flex-end;
+  justify-content: space-around;
+  
+}
+.votes{
+  margin:1%;
+}
+.commentNum{
+  margin:1%;
+}
+.date{
+  margin: 1%;
+}
+.vte{
+ 
+  width: 20px;
+  height: auto;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.navBar{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  float:inherit;
+  top: 0;
+  background-color: #1b1b1b;
+  height: 50px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding:3%;
   margin: auto;
   justify-content: row;
+  z-index:100;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.linkBox{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 10%;
+  justify-content: space-around;
+  width: 50%;
+  align-self:baseline;
+}
+.topicLink{
   color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.homeLink{
+  text-decoration: none;
+}
+.logo{
+  color: white;
+  font-size: 3rem;
+  padding-right: 30px;
+  margin: 2%;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
