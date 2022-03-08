@@ -16,7 +16,7 @@ function SideBar({sideBar}) {
         <div className={sideBar? "sideBar sideBar--open":"sideBar"}>
             <li className="listHeading">Topics</li>
             {topic.map((topic) => {
-            return (<li key={topic.slug}><Link className="topicLink" to={`/articles/${topic.slug}`}>{topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}</Link></li>
+            return (<li key={topic.slug}><Link className="topicLinks" to={`/articles/${topic.slug}`}>{topic.slug.charAt(0).toUpperCase() + topic.slug.slice(1)}</Link></li>
               
             );
           })}

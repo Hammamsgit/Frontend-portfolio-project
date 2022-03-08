@@ -38,7 +38,7 @@ export const getCommentsByArticleId = (id) => {
   });
 };
 
-// export const patchVote = (id,vote) => {
-//   return reiboApi.patch(`/articles/${id}`,{"inc_votes": vote}).then(({data:{article}})
-//   console.log(article))
-// };
+export const patchVote = (id,vote) => {
+  return reiboApi.patch(`/articles/${id}`,{"inc_votes": vote}).then(({data:{article}})=>{
+  return article })
+};
