@@ -3,7 +3,7 @@ import moment from 'moment';
 
 
 function CommentCard({author,body,votes,date}) {
-    const revisedDate= moment(date).utc().format('DD/MM/YYYY')
+    const revisedDate= moment(date).utc().fromNow()
     return (
         <div className="cCard">
             <h4 className="authorTag"><img className="vte" src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"/>{author}</h4>

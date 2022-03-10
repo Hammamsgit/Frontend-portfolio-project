@@ -3,6 +3,7 @@ import * as api from "../utils/api";
 import moment from "moment";
 import { useParams } from "react-router-dom";
 import CommentCard from "./CommentCard";
+import Collapse from "./Collapse";
 
 function SingleArticle(props) {
   const [article, setArticle] = useState([]);
@@ -11,6 +12,8 @@ function SingleArticle(props) {
   const [vote, setVote] = useState(0);
   const [activeVote, setActiveVote] = useState(false);
   const [error,setError]=useState(false)
+  const [comment,setComment]=useState([])
+  const [busy, setBusy]=useState(false)
 
   const [open, setOpen] = useState(false);
 
@@ -64,6 +67,16 @@ function SingleArticle(props) {
     }
   };
 
+  const postComment = (state)=>{
+    setBusy(true)
+    api.postComment(article_id,state).then((comment)=>{
+      setComment("")
+      setComments(preState=> [...preState,comment])
+      setBusy(false)
+    })
+
+  }
+
   return (
     <div className="card">
       <h4 className="authorTag">
@@ -89,7 +102,9 @@ function SingleArticle(props) {
  
           {vote}
         </p>
-        <p className="commentNum">
+        <p className="commentNum" onClick={() => {
+              setOpen(true);
+            }}>
           <img
             className="vte"
             src="https://img.icons8.com/material-two-tone/100/000000/comments--v2.png"
@@ -97,6 +112,7 @@ function SingleArticle(props) {
           {article.comment_count}
         </p>
       </div>
+      {/* <Collapse on={open}> */}
       <div className="commentSection">
         {comments.map(({ comment_id, author, body, created_at, votes }) => {
           return (
@@ -111,7 +127,23 @@ function SingleArticle(props) {
             </li>
           );
         })}
+        
+        <div className="postComment">
+          <form >
+            <li>
+          <textarea className="inputBox" type="text" value={comment} onChange={(e) => {setComment(e.target.value)}}> Type comment here....</textarea>
+          <span>
+            {!busy ?  <img className="post" onClick={() => {
+              if(comment.length>0)postComment(comment);
+            }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/>
+          : <p className="date"> Posting . . .</p>}
+         
+          </span>
+          </li>
+          </form>
+        </div>
       </div>
+      {/* </Collapse> */}
     </div>
   );
 }

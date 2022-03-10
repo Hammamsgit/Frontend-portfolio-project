@@ -1,9 +1,11 @@
 import React from 'react';
-import {useState, useLayoutEffect } from 'react';
+import {useState, useLayoutEffect,useContext } from 'react';
 import { Link } from "react-router-dom";
 import * as api from "../utils/api";
+import {userContext} from "../utils/Context";
 
 function SideBar({sideBar}) {
+    const {loggedInUser} = useContext(userContext)
     const [topic, setTopics] = useState([]);
     useLayoutEffect(()=>{
         api.getTopics().then((topics) => {
@@ -20,6 +22,9 @@ function SideBar({sideBar}) {
               
             );
           })}
+          <li><Link className="topicLinks" to="/users/signIn">
+    
+    {loggedInUser} </Link></li>
     
             
         </div>

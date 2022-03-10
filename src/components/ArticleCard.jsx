@@ -3,7 +3,7 @@ import moment from 'moment';
 import { Link } from "react-router-dom";
 
 function ArticleCard({article_id,title,author,votes,date,comments}) {
-    const revisedDate= moment(date).utc().format('DD/MM/YYYY')
+    const revisedDate= moment(date).utc().fromNow()
     return (
         <div className="card">
             

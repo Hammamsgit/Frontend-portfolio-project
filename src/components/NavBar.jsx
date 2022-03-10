@@ -1,11 +1,13 @@
 import React from 'react';
-import {useState,useEffect, useLayoutEffect } from 'react';
+import {useState,useEffect,useContext, useLayoutEffect } from 'react';
 import { Link } from "react-router-dom";
 import * as api from "../utils/api";
+import {userContext} from "../utils/Context";
 
 function NavBar({openSideBar}) {
     const [topic, setTopics] = useState([]);
 
+    const {loggedInUser} = useContext(userContext)
     const [isMobile, setIsMobile] = useState(false)
  
     //choose the screen size 
@@ -51,6 +53,10 @@ function NavBar({openSideBar}) {
             <Link className="homeLink" to="/">
             <h2 className="logo">Reibo</h2>
             </Link>
+            <div className="box">
+            <div className="userName"><Link className="userName" to="/users/signIn">
+    
+           {loggedInUser} </Link></div>
   
             <div className="linkBox">
           {topic.map((topic) => {
@@ -59,7 +65,7 @@ function NavBar({openSideBar}) {
             );
           })}
         </div>
-
+        </div>
         </nav>
     );
 }
