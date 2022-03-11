@@ -7,7 +7,10 @@ body {
   background-size:cover;
   background-color: #1b1b1b;
 }
+.cont{
+margin-top: 2%;
 
+}
 .signInCard li{
   list-style: none;
   margin: 5%;
@@ -78,11 +81,11 @@ visibility: collapse;
   text-align: center;
   width: 75%;
   display: flex;
-  /* top:1; */
+  gap:2%;
   flex-direction: column;
   align-items: center;
   padding: 3%;
-  margin: auto;
+  margin:auto;
   justify-content: column;
   background-color: lightgrey;
   border-radius: 10px;

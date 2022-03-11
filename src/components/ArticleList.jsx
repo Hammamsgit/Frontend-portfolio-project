@@ -37,7 +37,7 @@ function ArticleList(props) {
         <div>
           {article.map(({ article_id, title, author, body, created_at,votes,comment_count}) => {
             return (
-              <li key={article_id}>
+              <li className="cont" key={article_id}>
                 
                 <ArticleCard
                 article_id={article_id}
