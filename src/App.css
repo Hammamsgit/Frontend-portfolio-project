@@ -1,12 +1,13 @@
 body {
-  background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat center
+  background: url(https://wallpaperaccess.com/full/3204572.jpg) center
     center fixed;
-  -webkit-background-size: cover;
+  -webkit-background-size:cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size:cover;
   background-color: #1b1b1b;
 }
+
 .signInCard li{
   list-style: none;
   margin: 5%;
@@ -40,16 +41,11 @@ body {
   height: auto;
 }
 .userName{
-  color: white;
-  font-size: 1.6rem;
-  align-self: flex-end;
-  text-decoration: none;
-  font-weight: bold;
-  
+visibility: collapse;
 }
 .userName:active {
   color: darkgray;
- 
+ visibility: collapse;
 }
 
 .App {
@@ -239,6 +235,10 @@ form {
   font-weight: bold;
   border-width: 0.2px;
 }
+.linkBox {
+  visibility: collapse;
+
+}
 .signInCard {
   text-align: center;
   width: 75%;
@@ -419,6 +419,7 @@ form {
     z-index: 100;
   }
   .box{
+    visibility: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -429,6 +430,7 @@ form {
 
   }
   .linkBox {
+    visibility: visible;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -440,14 +442,15 @@ form {
     margin-bottom: 0px;
   }
   .userName{
+    visibility: visible;
     color: white;
     font-size: 1.6rem;
     align-self: flex-end;
     text-decoration: none;
     font-weight: bold;
-    
   }
   .userName:active {
+    visibility: visible;
     color: darkgray;
    
   }
@@ -460,7 +463,12 @@ form {
   .homeLink {
     text-decoration: none;
   }
-
+.burger{
+  visibility: collapse;
+  align-self: flex-end;
+  margin: 5px;
+  padding-right: 5%;
+}
   .signInButton{
     margin-top: 2%;
     border-radius: 20px;
@@ -604,4 +612,40 @@ button {
   to {
     transform: rotate(360deg);
   }
+}
+/*** iPhone and iOS Form Input Zoom Fixes ***/
+/* Fix Input Zoom on devices older than iPhone 5: */
+@media screen and (device-aspect-ratio: 2/3) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"]{ font-size: 16px; }
+}
+
+/* Fix Input Zoom on iPhone 5, 5C, 5S, iPod Touch 5g */
+@media screen and (device-aspect-ratio: 40/71) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"]{ font-size: 16px; }
+}
+
+/* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
+@media screen and (device-aspect-ratio: 375/667) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"], 
+  input[type="tel"], input[type="url"]{ font-size: 16px; }
+}
+
+/* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
+@media screen and (device-aspect-ratio: 9/16) {
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="tel"], input[type="url"]{ font-size: 16px; }
 }

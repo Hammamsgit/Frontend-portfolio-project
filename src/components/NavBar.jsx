@@ -56,6 +56,10 @@ function NavBar({openSideBar}) {
             <h2 className="logo">Reibo</h2>
             </Link>
             <div className="box">
+            <div className="burger" onClick={openSideBar}> 
+        <img src="https://img.icons8.com/material-rounded/24/ffffff/menu--v1.png" alt="menu"/>
+        
+        </div> 
             <div className="userName"><Link className="userName" to="/users/signIn">
     
            {loggedInUser} </Link></div>
