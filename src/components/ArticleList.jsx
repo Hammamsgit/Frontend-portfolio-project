@@ -1,29 +1,24 @@
-import React, {useState, useEffect } from 'react';
+import React, {useState, useEffect,useContext } from 'react';
 import * as api from "../utils/api";
 import ArticleCard from './ArticleCard';
 import {Link, useParams} from "react-router-dom";
-
+import {sortContext,orderContext} from "../utils/Context";
 function ArticleList(props) {
     const [article, setArticles] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    
+    const {sort} = useContext(sortContext);
+    const {order} = useContext(orderContext);
     const{topic}=useParams()
-
+    console.log({topic,sort},"sort")
     useEffect(()=>{
-        if(topic)
-    { api.getArticlesByTopic(topic).then((articles) => {
-        console.log(articles,"from article list")
-      setArticles(articles);
-      setIsLoading(false);
-      return articles;
-    }) } else{
-    api.getArticles().then((articles) => {
+ 
+    api.getArticles(topic,sort,order).then((articles) => {
         console.log(articles)
         setArticles(articles);
         setIsLoading(false);
         return articles;
       
-    })}}, [topic]);
+    })}, [topic,sort,order]);
 
     return isLoading ? (
         <p>Loading...</p>

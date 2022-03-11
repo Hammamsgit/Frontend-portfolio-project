@@ -4,8 +4,13 @@ const reiboApi = axios.create({
   baseURL: "https://reibo.herokuapp.com/api",
 });
 
-export const getArticles = () => {
-  return reiboApi.get("/articles").then(({ data: { articles } }) => {
+export const getArticles = (topic,sort_by,order) => {
+  
+  console.log(sort_by, "this is sort by from api ")
+  return reiboApi.get("/articles",{
+    params: { topic: topic, sort_by: sort_by, order: order}
+  }).then(({ data: { articles } }) => {
+    console.log(articles,"from api")
     return articles;
   });
 };
@@ -49,5 +54,12 @@ export const patchVote = (id, vote) => {
 export const postComment = (id, comment) => {
   return reiboApi.post(`/articles/${id}/comments`, {username:"grumpy19",body:comment}).then(({data: {comment}}) => {
     return comment;
+  });
+};
+
+export const deleteCommentById = (id) => {
+  return reiboApi.delete(`/comments/${id}`).then((res) => {
+    console.log(res)
+    return res;
   });
 };

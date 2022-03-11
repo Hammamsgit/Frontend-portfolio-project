@@ -14,8 +14,9 @@ function SingleArticle(props) {
   const [error,setError]=useState(false)
   const [comment,setComment]=useState([])
   const [busy, setBusy]=useState(false)
-
+  const [commentError,setCommentError]=useState(false)
   const [open, setOpen] = useState(false);
+
 
   const { article_id } = useParams();
 
@@ -73,9 +74,13 @@ function SingleArticle(props) {
       setComment("")
       setComments(preState=> [...preState,comment])
       setBusy(false)
+    }).catch((err)=>{
+      setCommentError(true)
     })
-
+    setCommentError(false)
   }
+
+
 
   return (
     <div className="card">
@@ -103,7 +108,7 @@ function SingleArticle(props) {
           {vote}
         </p>
         <p className="commentNum" onClick={() => {
-              setOpen(true);
+              setOpen(!open);
             }}>
           <img
             className="vte"
@@ -112,7 +117,7 @@ function SingleArticle(props) {
           {article.comment_count}
         </p>
       </div>
-      {/* <Collapse on={open}> */}
+      <Collapse on={open}>
       <div className="commentSection">
         {comments.map(({ comment_id, author, body, created_at, votes }) => {
           return (
@@ -133,17 +138,23 @@ function SingleArticle(props) {
             <li>
           <textarea className="inputBox" type="text" value={comment} onChange={(e) => {setComment(e.target.value)}}> Type comment here....</textarea>
           <span>
-            {!busy ?  <img className="post" onClick={() => {
+            {!commentError ? !busy ?  <img className="post" onClick={() => {
               if(comment.length>0)postComment(comment);
             }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/>
-          : <p className="date"> Posting . . .</p>}
+          :  <p className="post"> <img className="post" disabled onClick={() => {
+            if(comment.length>0)postComment(comment);
+          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
+          Posting . . .</p> : <p className="post"> <img className="post" disabled onClick={() => {
+            if(comment.length>0)postComment(comment);
+          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
+          Sorry, comment was not posted...</p> }
          
           </span>
           </li>
           </form>
         </div>
       </div>
-      {/* </Collapse> */}
+      </Collapse>
     </div>
   );
 }

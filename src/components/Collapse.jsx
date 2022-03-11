@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 
-function Collapse({children},{on}) {
-    const [visible,setVisbility]= useState(false);
-    if(on){setVisbility((current)=>!current)}
-        
-    
-    return (
+function Collapse({children, on}) {
+  
+console.log(on, " from collapse")
+    if(on){ return (
         <>
-        {visible&&children}
+        {children}
             
         </>
     );
+    }else { return (<></>)}
 }
 
 export default Collapse;
