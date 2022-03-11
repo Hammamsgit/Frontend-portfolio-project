@@ -2,19 +2,13 @@
   :root {
     background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
       center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-color: black;
-    max-height: 100vh;
-    overflow: auto;
+      object-fit: cover;
 
-    overflow-x: hidden;
- 
-    overflow-y: scroll;
- 
-    -webkit-overflow-scrolling: touch;
+    -webkit-background-size: cover ;
+    -moz-background-size: cover ;
+    -o-background-size: cover ;
+    background-size: cover ;
+    background-color: black;
   }
 .cont{
 margin-top: 2%;
