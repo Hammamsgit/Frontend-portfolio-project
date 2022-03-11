@@ -1,5 +1,5 @@
 
-  /* body {
+  body {
     background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
       center center fixed;
     -webkit-background-size: cover;
@@ -15,7 +15,7 @@
     overflow-y: scroll;
  
     -webkit-overflow-scrolling: touch;
-  } */
+  }
 .cont{
 margin-top: 2%;
 
@@ -76,19 +76,8 @@ visibility: collapse;
 }
 
 .App {
-  
   text-align: center;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: -1;
-
-  background-image: url(https://wallpaperaccess.com/full/3204572.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
+  
 }
 .cmnt {
   width: 16px;

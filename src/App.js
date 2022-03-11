@@ -7,7 +7,6 @@ import SideBar from "./components/SideBar";
 import {userContext,sortContext,orderContext} from "./utils/Context";
 import SingleArticle from "./components/SingleArticle";
 import SignInPage from "./components/SignInPage";
-import ErrorCard from "./components/ErrorCard";
 
 
 function App() {
