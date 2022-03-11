@@ -1,6 +1,7 @@
 body {
   background: url(https://wallpaperaccess.com/full/3204572.jpg) center
     center fixed;
+    position: absolute;
   -webkit-background-size:cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -317,6 +318,7 @@ form {
   body {
     background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
       center center fixed;
+      position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
