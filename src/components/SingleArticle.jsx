@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import * as api from "../utils/api";
 import moment from "moment";
 import { useParams } from "react-router-dom";
 import CommentCard from "./CommentCard";
 import Collapse from "./Collapse";
+import {userContext} from "../utils/Context";
+
 
 function SingleArticle(props) {
   const [article, setArticle] = useState([]);
@@ -12,11 +14,12 @@ function SingleArticle(props) {
   const [vote, setVote] = useState(0);
   const [activeVote, setActiveVote] = useState(false);
   const [error,setError]=useState(false)
+  const [pageError,setPageError]=useState(null)
   const [comment,setComment]=useState([])
   const [busy, setBusy]=useState(false)
   const [commentError,setCommentError]=useState(false)
   const [open, setOpen] = useState(false);
-
+  const {loggedInUser} = useContext(userContext)
 
   const { article_id } = useParams();
 
@@ -24,9 +27,13 @@ function SingleArticle(props) {
     api.getArticleById(article_id).then((article) => {
       console.log(article, "This is from single article ");
       setArticle(article);
+      setPageError(false);
       setVote(article.votes);
       setIsLoading(false);
       return article;
+    }).catch(({response:{data:{msg},status}})=>{
+      setPageError({status,msg})
+      setIsLoading(false)
     });
     api.getCommentsByArticleId(article_id).then((comments) => {
       setComments(comments);
@@ -70,7 +77,7 @@ function SingleArticle(props) {
 
   const postComment = (state)=>{
     setBusy(true)
-    api.postComment(article_id,state).then((comment)=>{
+    api.postComment(article_id,loggedInUser,state).then((comment)=>{
       setComment("")
       setComments(preState=> [...preState,comment])
       setBusy(false)
@@ -81,8 +88,17 @@ function SingleArticle(props) {
   }
 
 
-
-  return (
+  if (isLoading){
+    return (
+      <p>Loading...</p>
+    )
+  
+  }
+  return pageError ? ( 
+    <div className="card">
+      <h3 >{pageError.status}:{pageError.msg}</h3>
+      </div>):(
+ 
     <div className="card">
       <h4 className="authorTag">
         <img

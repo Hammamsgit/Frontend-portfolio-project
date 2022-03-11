@@ -51,8 +51,8 @@ export const patchVote = (id, vote) => {
     });
 };
 
-export const postComment = (id, comment) => {
-  return reiboApi.post(`/articles/${id}/comments`, {username:"grumpy19",body:comment}).then(({data: {comment}}) => {
+export const postComment = (id, user,comment) => {
+  return reiboApi.post(`/articles/${id}/comments`, {username:user,body:comment}).then(({data: {comment}}) => {
     return comment;
   });
 };

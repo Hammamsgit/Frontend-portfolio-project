@@ -83,7 +83,7 @@ body {
   border-radius: 5px;
 }
 .post{
-  margin-bottom: 5%;
+  margin-bottom: 5%
 }
 .postComment {
   height: 10%;
@@ -314,10 +314,17 @@ form {
     align-items: center;
     padding-top: 3%;
     margin: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: lightgrey;
     border-radius: 10px;
     filter: opacity(0.94);
+    list-style: none;
+
+  
+  }
+  .signInCard li{
+    list-style: none;
+    margin: 5%;
   }
   .commentSection {
     border: black solid 1px;
@@ -431,6 +438,19 @@ form {
   }
   .homeLink {
     text-decoration: none;
+  }
+
+  .signInButton{
+    margin-top: 2%;
+    border-radius: 20px;
+    font-weight: bold ;
+  }
+  .signInButton:active{
+    margin-top: 2%;
+    border-radius: 20px;
+    font-weight: bold ;
+    background-color: darkgray;
+
   }
   .logo {
     color: white;

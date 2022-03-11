@@ -7,6 +7,7 @@ import SideBar from "./components/SideBar";
 import {userContext,sortContext,orderContext} from "./utils/Context";
 import SingleArticle from "./components/SingleArticle";
 import SignInPage from "./components/SignInPage";
+import ErrorCard from "./components/ErrorCard";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <div>
       <Routes>
       <Route path="/" element={<ArticleList />} />
+      <Route path="*" element={<ErrorCard />}/>
       <Route path="/articles/:topic" element={<ArticleList />}/>
       <Route path="/article/:article_id" element={<SingleArticle />}/>
       <Route path="/users/signIn" element={<SignInPage />} />

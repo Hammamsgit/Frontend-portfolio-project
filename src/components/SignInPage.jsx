@@ -19,9 +19,9 @@ function SignInPage(props) {
     return (
         <div>
             <form className="signInCard" onSubmit={handleSubmit}>
-                <ul>
+                <ul><li>Default user: grumpy19</li>
                     <li>Username: <input type="text" value={signIn.username} onChange={(e) => {setSignIn(e.target.value)}}></input> </li>
-                    <button type="submit" >Sign in</button>
+                    <button type="submit" className="signInButton" >Sign in</button>
                 </ul>
             </form>
         </div>
