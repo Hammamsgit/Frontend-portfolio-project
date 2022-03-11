@@ -13,6 +13,7 @@ function SideBar({sideBar}) {
     const [openTopics, setOpenTopics] = useState(false);
     const [openSort, setOpenSort] = useState(false);
     const [openOrder, setOpenOrder] = useState(false);
+
     useLayoutEffect(()=>{
         api.getTopics().then((topics) => {
             console.log(topics, "from nav bar")

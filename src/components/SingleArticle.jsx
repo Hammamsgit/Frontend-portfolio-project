@@ -160,10 +160,10 @@ function SingleArticle(props) {
           :  <p className="post"> <img className="post" disabled onClick={() => {
             if(comment.length>0)postComment(comment);
           }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
-          Posting . . .</p> : <p className="post"> <img className="post" disabled onClick={() => {
+          <p>Posting . . .</p></p> : <p className="post"> <img className="post" disabled onClick={() => {
             if(comment.length>0)postComment(comment);
           }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
-          Sorry, comment was not posted...</p> }
+          <p>Sorry, comment was not posted... </p></p> }
          
           </span>
           </li>

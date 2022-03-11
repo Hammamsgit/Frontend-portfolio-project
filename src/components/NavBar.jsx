@@ -9,13 +9,14 @@ function NavBar({openSideBar}) {
     const {setSort} = useContext(sortContext)
     const {setOrder} = useContext(orderContext)
     const {loggedInUser} = useContext(userContext)
-    const [isMobile, setIsMobile] = useState(false)
+    const [isMobile, setIsMobile] = useState(null)
  
     //choose the screen size 
     const handleResize = () => {
     if (window.innerWidth < 640) {
         setIsMobile(true)
-    } else {
+    } 
+    else {
         setIsMobile(false)
     }
     }
@@ -32,7 +33,7 @@ function NavBar({openSideBar}) {
             setTopics(topics);
             return topics;
           
-        })}, []);
+        })}, [isMobile]);
 
     if(isMobile){
         return ( <nav className="navBar" >

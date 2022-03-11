@@ -1,5 +1,4 @@
-import React, { useEffect, useState,useContext } from 'react';
-import * as api from '../utils/api'
+import React, { useState,useContext } from 'react';
 import {userContext} from "../utils/Context";
 
 

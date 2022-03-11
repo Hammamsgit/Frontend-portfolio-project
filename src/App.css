@@ -7,6 +7,22 @@ body {
   background-size: cover;
   background-color: #1b1b1b;
 }
+.signInCard li{
+  list-style: none;
+  margin: 5%;
+}
+.signInButton{
+  margin-top: 2%;
+  border-radius: 20px;
+  font-weight: bold ;
+}
+.signInButton:active{
+  margin-top: 2%;
+  border-radius: 20px;
+  font-weight: bold ;
+  background-color: darkgray;
+
+}
 .cTools{
   display:flex;
   flex-direction: row;
@@ -83,7 +99,7 @@ body {
   border-radius: 5px;
 }
 .post{
-  margin-bottom: 5%
+  margin-bottom: 2%
 }
 .postComment {
   height: 10%;
@@ -131,7 +147,9 @@ form {
   filter: opacity(0.94);
   border-bottom: solid 0.2px rgba(139, 139, 139, 0.137);
 }
-
+.post{
+  margin-bottom: 1%
+}
 
 .post:active {
   transform: rotate(45deg);
@@ -206,6 +224,9 @@ form {
 }
 .listHeading {
   color: rgb(167, 167, 167);
+}
+.listHeading:active {
+  color: rgb(27, 27, 27);
 }
 .sideBar li {
   list-style: none;
