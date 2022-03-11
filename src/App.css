@@ -37,11 +37,15 @@ margin-top: 2%;
 .authorTag {
   align-self: flex-end;
   margin-right: 15px;
+  list-style-type: none;
 }
 .bin{align-self: flex-start;
   margin-left: 1%;
   width: 5px;
   height: auto;
+}
+.username{
+  visibility: visible;
 }
 .userName{
 visibility: collapse;
@@ -521,7 +525,7 @@ form {
   
   
   background-color: #1b1b1b;
-  margin-top: 14%;
+  margin-top: 12%;
  
   min-width: 200px;
   border-radius:10px;

@@ -52,7 +52,7 @@ function SideBar({sideBar}) {
           <li className="topicLink">
           <label key={3} className="sortLinks" onClick={()=>{{setOrder("votes")}}}>Descending</label></li>
           </Collapse>
-          <li><Link className="userName" to="/users/signIn">
+          <li><Link className="username" to="/users/signIn">
     
     {loggedInUser} </Link></li>
     
