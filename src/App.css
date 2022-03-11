@@ -1,14 +1,21 @@
 
-body {
-  background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
-    center center fixed;
-    position: relative;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-color: #1b1b1b;
-}
+  body {
+    background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
+      center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black;
+    
+    height: 100%;
+
+    overflow-x: hidden;
+ 
+    overflow-y: scroll;
+ 
+    -webkit-overflow-scrolling: touch;
+  }
 .cont{
 margin-top: 2%;
 
@@ -136,7 +143,7 @@ visibility: collapse;
   height: 90%;
   min-height: min-content;
   resize: none;
-  align-self: center;
+  align-self: left;
   margin: none;
   padding-top: 10px;
   color: white;
@@ -378,6 +385,18 @@ form {
     justify-content:space-between;
     align-items: center;
     width: 80%;
+  }
+  .inputBox {
+    width: 100%;
+    height: 90%;
+    min-height: min-content;
+    resize: none;
+    align-self: left;
+    margin: none;
+    padding-top: 10px;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
   }
   .authorTag {
     align-self: flex-end;
