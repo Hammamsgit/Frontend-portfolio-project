@@ -2,13 +2,10 @@
   :root {
     background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
       center center fixed;
-      object-fit: cover;
-
-    -webkit-background-size: cover ;
-    -moz-background-size: cover ;
-    -o-background-size: cover ;
-    background-size: cover ;
-    background-color: black;
+      background-position: center top;
+      background-size: cover;
+      background-color: black;
+      
   }
 .cont{
 margin-top: 2%;
