@@ -26,7 +26,6 @@ function CommentCard({comment_id,author,body,votes,date}) {
     }
   }, []);
 
- 
     const revisedDate= moment(date).utc().fromNow()
     return (
         <div className="cCard">
