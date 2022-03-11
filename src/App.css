@@ -1,45 +1,38 @@
+
 body {
-  background: url(https://w0.peakpx.com/wallpaper/744/229/HD-wallpaper-whatsapp-cartoon-halloween-black-dark-simple-rock-skull.jpg )
+  background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
     center center fixed;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+    position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   background-color: #1b1b1b;
 }
-.mobile body {
-
-  height: 100%;
-
-  overflow-x: hidden;
-
-  overflow-y: scroll;
-
-  -webkit-overflow-scrolling: touch;
+.cont{
+margin-top: 2%;
 
 }
-.cont {
-  margin-top: 2%;
-}
-.signInCard li {
+.signInCard li{
   list-style: none;
   margin: 5%;
 }
-.signInButton {
+.signInButton{
   margin-top: 2%;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: bold ;
 }
-.signInButton:active {
+.signInButton:active{
   margin-top: 2%;
   border-radius: 20px;
-  font-weight: bold;
+  font-weight: bold ;
   background-color: darkgray;
+
 }
-.cTools {
-  display: flex;
+.cTools{
+  display:flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
   width: 80%;
 }
@@ -48,14 +41,13 @@ body {
   margin-right: 15px;
   list-style-type: none;
 }
-.bin {
-  align-self: flex-start;
+.bin{align-self: flex-start;
   margin-left: 1%;
   width: 5px;
   height: auto;
 }
 
-.username {
+.username{
   visibility: visible;
   color: white;
   font-size: 1.6rem;
@@ -66,13 +58,14 @@ body {
 .username:active {
   visibility: visible;
   color: darkgray;
+ 
 }
-.userName {
-  visibility: collapse;
+.userName{
+visibility: collapse;
 }
 .userName:active {
   color: darkgray;
-  visibility: collapse;
+ visibility: collapse;
 }
 
 .App {
@@ -105,11 +98,11 @@ body {
   text-align: center;
   width: 75%;
   display: flex;
-  gap: 5%;
+  gap:5%;
   flex-direction: column;
   align-items: center;
   padding: 3%;
-  margin: auto;
+  margin:auto;
   justify-content: column;
   background-color: lightgrey;
   border-radius: 10px;
@@ -121,8 +114,8 @@ body {
   list-style-type: none;
   border-radius: 5px;
 }
-.post {
-  margin-bottom: 2%;
+.post{
+  margin-bottom: 2%
 }
 .postComment {
   height: 10%;
@@ -136,14 +129,14 @@ body {
   justify-content: row;
   background-color: rgb(0, 0, 0);
   resize: none;
-  color: white;
+  color:white;
 }
 .inputBox {
-  width: 100%;
+  width: 90%;
   height: 90%;
   min-height: min-content;
   resize: none;
-  align-self: left;
+  align-self: center;
   margin: none;
   padding-top: 10px;
   color: white;
@@ -170,8 +163,8 @@ form {
   filter: opacity(0.94);
   border-bottom: solid 0.2px rgba(139, 139, 139, 0.137);
 }
-.post {
-  margin-bottom: 1%;
+.post{
+  margin-bottom: 1%
 }
 
 .post:active {
@@ -264,6 +257,7 @@ form {
 }
 .linkBox {
   visibility: collapse;
+
 }
 .signInCard {
   text-align: center;
@@ -296,11 +290,12 @@ form {
   text-decoration: none;
   padding: 3%;
 }
-.sortLinks {
+.sortLinks{
   color: white;
   font-size: 1rem;
   text-decoration: none;
   padding: 3%;
+
 }
 .topicLink:active {
   color: darkgray;
@@ -324,7 +319,7 @@ form {
   body {
     background: url(https://wallpaperaccess.com/full/3204572.jpg) no-repeat
       center center fixed;
-    position: relative;
+      position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -351,6 +346,7 @@ form {
     filter: opacity(0.97);
   }
 
+
   .signInCard {
     text-align: center;
     width: 75%;
@@ -365,8 +361,10 @@ form {
     border-radius: 10px;
     filter: opacity(0.94);
     list-style: none;
+
+  
   }
-  .signInCard li {
+  .signInCard li{
     list-style: none;
     margin: 5%;
   }
@@ -374,10 +372,10 @@ form {
     border: black solid 1px;
     background-color: darkgray;
   }
-  .cTools {
-    display: flex;
+  .cTools{
+    display:flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
     width: 80%;
   }
@@ -385,8 +383,7 @@ form {
     align-self: flex-end;
     margin-right: 20px;
   }
-  .bin {
-    align-self: flex-start;
+  .bin{align-self: flex-start;
     margin-left: 1%;
     width: 10px;
     height: auto;
@@ -432,7 +429,7 @@ form {
     top: 0;
     background-color: #1b1b1b;
     height: 50px;
-    width: 100%;
+    width:100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -442,7 +439,7 @@ form {
     justify-content: row;
     z-index: 100;
   }
-  .box {
+  .box{
     visibility: visible;
     display: flex;
     flex-direction: column;
@@ -451,6 +448,7 @@ form {
     width: 100%;
     justify-content: space-between;
     padding-right: 10%;
+
   }
   .linkBox {
     visibility: visible;
@@ -464,7 +462,7 @@ form {
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
-  .userName {
+  .userName{
     visibility: visible;
     color: white;
     font-size: 1.6rem;
@@ -475,6 +473,7 @@ form {
   .userName:active {
     visibility: visible;
     color: darkgray;
+   
   }
   .topicLink {
     color: white;
@@ -485,22 +484,23 @@ form {
   .homeLink {
     text-decoration: none;
   }
-  .burger {
-    visibility: collapse;
-    align-self: flex-end;
-    margin: 5px;
-    padding-right: 5%;
-  }
-  .signInButton {
+.burger{
+  visibility: collapse;
+  align-self: flex-end;
+  margin: 5px;
+  padding-right: 5%;
+}
+  .signInButton{
     margin-top: 2%;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: bold ;
   }
-  .signInButton:active {
+  .signInButton:active{
     margin-top: 2%;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: bold ;
     background-color: darkgray;
+
   }
   .logo {
     color: white;
@@ -510,100 +510,102 @@ form {
     text-decoration: none;
   }
 
-  .dropbtn {
-    background-color: #1b1b1b;
-    /* position: absolute; */
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding-right: 10%;
-    border: none;
-    cursor: pointer;
-    filter: opacity(0.99);
-    border-left: rgba(139, 139, 139, 0.137);
-  }
+.dropbtn {
+  background-color: #1b1b1b;
+  /* position: absolute; */
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding-right: 10%;
+  border: none;
+  cursor: pointer;
+  filter: opacity(0.99);
+  border-left: rgba(139, 139, 139, 0.137);
+}
 
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 0%;
-    justify-content: center;
-  }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding-top: 0%;
+  justify-content: center;
+  
+}
 
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  
+  
+  background-color: #1b1b1b;
+  margin-top: 12%;
+ 
+  min-width: 200px;
+  border-radius:10px;
+  z-index: 2;
+}
+.dropdown-content1 {
+  display: none;
+  
+  
+  background-color: #1b1b1b;
+  margin-top: 10%;
+ 
+  min-width: 200px;
+  border-radius:10px;
+  z-index: 2;
+}
 
-    background-color: #1b1b1b;
-    margin-top: 12%;
 
-    min-width: 200px;
-    border-radius: 10px;
-    z-index: 2;
-  }
-  .dropdown-content1 {
-    display: none;
+/* Links inside the dropdown */
+.dropdown-content button {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 80%;
+  margin-left: 2%;
+  align-self: center;
+  border-radius: 10px;
+  margin:auto;
+  
+}
+.dropdown-content1 button {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 80%;
+  margin-left: 2%;
+  align-self: center;
+  border-radius: 10px;
+  margin:auto;
+  
+}
 
-    background-color: #1b1b1b;
-    margin-top: 10%;
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #2e2e2e}
 
-    min-width: 200px;
-    border-radius: 10px;
-    z-index: 2;
-  }
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover {background-color: #2e2e2e}
 
-  /* Links inside the dropdown */
-  .dropdown-content button {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    width: 80%;
-    margin-left: 2%;
-    align-self: center;
-    border-radius: 10px;
-    margin: auto;
-  }
-  .dropdown-content1 button {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    width: 80%;
-    margin-left: 2%;
-    align-self: center;
-    border-radius: 10px;
-    margin: auto;
-  }
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  position:fixed;
+  display: block;
+}
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content1 {
+  position:fixed;
+  display: block;
+}
 
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #2e2e2e;
-  }
-
-  /* Change color of dropdown links on hover */
-  .dropdown-content1 a:hover {
-    background-color: #2e2e2e;
-  }
-
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    position: fixed;
-    display: block;
-  }
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content1 {
-    position: fixed;
-    display: block;
-  }
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #1b1b1b;
-    color: darkgray;
-  }
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #1b1b1b;
+  color: darkgray;
+}
 }
 
 button {
@@ -617,10 +619,12 @@ button {
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 
 @keyframes App-logo-spin {
   from {
@@ -633,78 +637,36 @@ button {
 /*** iPhone and iOS Form Input Zoom Fixes ***/
 /* Fix Input Zoom on devices older than iPhone 5: */
 @media screen and (device-aspect-ratio: 2/3) {
-  select,
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"] {
-    font-size: 16px;
-  }
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"]{ font-size: 16px; }
 }
 
 /* Fix Input Zoom on iPhone 5, 5C, 5S, iPod Touch 5g */
 @media screen and (device-aspect-ratio: 40/71) {
-  select,
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="url"] {
-    font-size: 16px;
-  }
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="url"]{ font-size: 16px; }
 }
 
 /* Fix Input Zoom on iPhone 6, iPhone 6s, iPhone 7  */
 @media screen and (device-aspect-ratio: 375/667) {
-  select,
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="url"] {
-    font-size: 16px;
-  }
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"], 
+  input[type="tel"], input[type="url"]{ font-size: 16px; }
 }
 
 /* Fix Input Zoom on iPhone 6 Plus, iPhone 6s Plus, iPhone 7 Plus, iPhone 8, iPhone X, XS, XS Max  */
 @media screen and (device-aspect-ratio: 9/16) {
-  select,
-  textarea,
-  input[type="text"],
-  input[type="password"],
-  input[type="datetime"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="month"],
-  input[type="time"],
-  input[type="week"],
-  input[type="number"],
-  input[type="email"],
-  input[type="tel"],
-  input[type="url"] {
-    font-size: 16px;
-  }
+  select, textarea, input[type="text"], input[type="password"],
+  input[type="datetime"], input[type="datetime-local"],
+  input[type="date"], input[type="month"], input[type="time"],
+  input[type="week"], input[type="number"], input[type="email"],
+  input[type="tel"], input[type="url"]{ font-size: 16px; }
 }
