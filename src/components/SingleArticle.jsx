@@ -40,6 +40,7 @@ function SingleArticle(props) {
       return comments;
     });
   }, []);
+  
   const revisedDate = moment(article.created_at).utc().format("DD/MM/YYYY");
 
   const incVote = (num) => {
@@ -156,13 +157,13 @@ function SingleArticle(props) {
           <span>
             {!commentError ? !busy ?  <img className="post" onClick={() => {
               if(comment.length>0)postComment(comment);
-            }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/>
+            }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png" alt="post a comment icon"/>
           :  <p className="post"> <img className="post" disabled onClick={() => {
             if(comment.length>0)postComment(comment);
-          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
+          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png" alt="post a comment icon"/> 
           <p>Posting . . .</p></p> : <p className="post"> <img className="post" disabled onClick={() => {
             if(comment.length>0)postComment(comment);
-          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
+          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png" alt="post a comment icon"/> 
           <p>Sorry, comment was not posted... </p></p> }
          
           </span>

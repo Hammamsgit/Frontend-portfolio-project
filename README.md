@@ -1,43 +1,60 @@
-# Getting Started with Create React App
+ <img src="./reibo.png" alt="ReactJS LOGO" width="800" />
+  <p></p>
+  
+  <p></p>
+  <sup>
+    <a href="https://reibo.netlify.app/">  
+   
+  </sup>
+  <br />
+  <p align="center">
+    <a href="https://nc-news-blame.netlify.app/"><b>Demonstration</b></a>
+    &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+    <a href="#-Instructions"><b>Usage</b></a>
+    &nbsp;&nbsp;&mdash;&nbsp;&nbsp;
+    <a href="https://github.com/Hammamsgit/Backend-Portfolio-Project"><b>Backend API</b></a>
+  </p>
+  <br />
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🙋🏽‍♂️ Intro
 
-### `npm start`
+Reibo was built with the user in mind using <a href="https://reactjs.org/"><b>React</b></a>. Reibo allows users to view articles written and socialise based on the individuals interest. All styling was self performed using CSS and no UI kits were utilised. Inspirations for the app can be found in social media giants like reddit and facebook. For UI design, the inspiration was taken from the apple website and the whatsapp app. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Instructions 🔧 
 
-### `npm test`
+* Begin by cloning the repository into a suitable directory. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        git clone https://github.com/Hammamsgit/Frontend-portfolio-project.git
+        cd FE-NC-News
 
-### `npm run build`
+* Then open the cloned repository. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        using  code .  if running on VScode 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+* Run the following code to install any dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+        npm i 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Run the following code to start the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        npm start 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+
+## Minimum Node.js 
+* v15.14.0
+
+
+ 
+<br />
 
 ## Learn More
 

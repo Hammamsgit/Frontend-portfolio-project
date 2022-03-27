@@ -23,7 +23,7 @@ function CommentCard({comment_id,author,body,votes,date}) {
   useEffect(() => {
     if (author === loggedInUser && !issue) {
       setDelete(
-        <img  className="vte" onClick={handleDelete} src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png"/>
+        <img  className="vte" onClick={handleDelete} src="https://img.icons8.com/ios-filled/50/ffffff/delete-sign--v1.png" alt="delete button"/>
       );
     }
   }, [body]);
@@ -33,14 +33,14 @@ function CommentCard({comment_id,author,body,votes,date}) {
         <div className="cCard">
           <div className="cTools">
             <h4 className="bin" >{deleteIcon}</h4>
-            <h4 className="authorTag"> <img className="vte" src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"/>{author}</h4>
+            <h4 className="authorTag"> <img className="vte" src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" alt="user icon"/>{author}</h4>
             </div>
             <>{error}</>
             <></>
           <p>{newBody} </p> 
           <div className="tools">
           <p className="date"> Posted {revisedDate}</p>
-          <p className="votes"> <img className="vte"src="https://img.icons8.com/ios-glyphs/30/000000/star-half-empty.png"/>{votes}</p>
+          <p className="votes"> <img className="vte"src="https://img.icons8.com/ios-glyphs/30/000000/star-half-empty.png" alt="votes icon"/>{votes}</p>
           </div>
           
         </div>

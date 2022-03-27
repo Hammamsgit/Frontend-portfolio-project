@@ -69,6 +69,7 @@ body:after {
 }
 .userName {
   visibility: collapse;
+  align-self: flex-start;
 }
 .userName:active {
   color: darkgray;
@@ -229,6 +230,7 @@ form {
 }
 
 .burger {
+  margin-left: auto;
   align-self: flex-end;
   margin: 5px;
   padding-right: 5%;
