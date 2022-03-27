@@ -103,7 +103,7 @@ function SingleArticle(props) {
       <h4 className="authorTag">
         <img
           className="vte"
-          src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"
+          src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png" alt="user icon"
         />
         {article.author}
       </h4>
@@ -115,11 +115,11 @@ function SingleArticle(props) {
         <p className="votes" onClick={() => {
               incVote(1);
             }}>
-          {error ?  <img className="vte" src="https://img.icons8.com/material/50/000000/cancel-2--v1.png"/>:  !activeVote ? <img
+          {error ?  <img className="vte" src="https://img.icons8.com/material/50/000000/cancel-2--v1.png" alt="votes icon"/>:  !activeVote ? <img
             className="vte"
-            src="https://img.icons8.com/ios-glyphs/30/000000/star-half-empty.png"
+            src="https://img.icons8.com/ios-glyphs/30/000000/star-half-empty.png" alt="votes icon"
  
-          /> : <img className="vte1" src="https://img.icons8.com/external-filled-line-kendis-lasman/64/000000/external-star-graphic-design-filled-line-filled-line-kendis-lasman.png"/>}
+          /> : <img className="vte1" src="https://img.icons8.com/external-filled-line-kendis-lasman/64/000000/external-star-graphic-design-filled-line-filled-line-kendis-lasman.png" alt="votes icon"/>}
  
           {vote}
         </p>
@@ -128,7 +128,7 @@ function SingleArticle(props) {
             }}>
           <img
             className="vte"
-            src="https://img.icons8.com/material-two-tone/100/000000/comments--v2.png"
+            src="https://img.icons8.com/material-two-tone/100/000000/comments--v2.png " alt="comments icon"
           />
           {article.comment_count}
         </p>
@@ -156,13 +156,13 @@ function SingleArticle(props) {
           <span>
             {!commentError ? !busy ?  <img className="post" onClick={() => {
               if(comment.length>0)postComment(comment);
-            }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/>
+            }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png" alt="post a comment icon"/>
           :  <p className="post"> <img className="post" disabled onClick={() => {
             if(comment.length>0)postComment(comment);
-          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
+          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png" alt="post a comment icon"/> 
           <p>Posting . . .</p></p> : <p className="post"> <img className="post" disabled onClick={() => {
             if(comment.length>0)postComment(comment);
-          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png"/> 
+          }} src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-arrow-arrow-flatart-icons-lineal-color-flatarticons-6.png" alt="post a comment icon"/> 
           <p>Sorry, comment was not posted... </p></p> }
          
           </span>
