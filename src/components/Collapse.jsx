@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 function Collapse({children, on}) {
   
-console.log(on, " from collapse")
     if(on){ return (
         <>
         {children}

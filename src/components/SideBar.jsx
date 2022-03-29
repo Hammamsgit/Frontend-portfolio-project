@@ -16,7 +16,6 @@ function SideBar({sideBar}) {
 
     useLayoutEffect(()=>{
         api.getTopics().then((topics) => {
-            console.log(topics, "from nav bar")
             setTopics(topics);
             return topics;
           

@@ -25,7 +25,6 @@ function SingleArticle(props) {
 
   useEffect(() => {
     api.getArticleById(article_id).then((article) => {
-      console.log(article, "This is from single article ");
       setArticle(article);
       setPageError(false);
       setVote(article.votes);

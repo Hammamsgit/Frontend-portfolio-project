@@ -6,11 +6,9 @@ const reiboApi = axios.create({
 
 export const getArticles = (topic,sort_by,order) => {
   
-  console.log(sort_by, "this is sort by from api ")
   return reiboApi.get("/articles",{
     params: { topic: topic, sort_by: sort_by, order: order}
   }).then(({ data: { articles } }) => {
-    console.log(articles,"from api")
     return articles;
   });
 };
@@ -59,7 +57,6 @@ export const postComment = (id, user,comment) => {
 
 export const deleteCommentById = (id) => {
   return reiboApi.delete(`/comments/${id}`).then((res) => {
-    console.log(res)
     return res;
   });
 };

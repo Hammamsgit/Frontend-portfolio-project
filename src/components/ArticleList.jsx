@@ -1,8 +1,8 @@
 import React, {useState, useEffect,useContext } from 'react';
 import * as api from "../utils/api";
 import ArticleCard from './ArticleCard';
-import {Link, useParams} from "react-router-dom";
-import {sortContext,orderContext,userContext} from "../utils/Context";
+import {useParams} from "react-router-dom";
+import {sortContext,orderContext} from "../utils/Context";
 function ArticleList(props) {
     const [article, setArticles] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -10,7 +10,6 @@ function ArticleList(props) {
     const {sort} = useContext(sortContext);
     const {order} = useContext(orderContext);
     const{topic}=useParams()
-    console.log({topic,sort},"sort")
 
     useEffect(()=>{
     api.getArticles(topic,sort,order).then((articles) => {
